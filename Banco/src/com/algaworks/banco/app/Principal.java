@@ -1,6 +1,7 @@
 package com.algaworks.banco.app;
 
 import com.algaworks.banco.model.Conta;
+import com.algaworks.banco.model.ContaInvestimento;
 import com.algaworks.banco.model.Pessoa;
 
 public class Principal {
@@ -12,9 +13,10 @@ public class Principal {
         maria.setNome("Maria Aparecida");
         maria.setDocumento("11110");
 
-        Conta minhaConta = new Conta(joao,1,1);
+        ContaInvestimento minhaConta = new ContaInvestimento(joao,1,1);
 
         minhaConta.depositar(15000);
+        minhaConta.creditarRendimentos(0.8);
         Conta suaConta = new Conta(maria,1,2);
 
         suaConta.depositar(3000.00);
