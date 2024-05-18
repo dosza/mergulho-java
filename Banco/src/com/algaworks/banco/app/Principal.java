@@ -1,6 +1,7 @@
 package com.algaworks.banco.app;
 
 import com.algaworks.banco.model.Conta;
+import com.algaworks.banco.model.ContaEspecial;
 import com.algaworks.banco.model.ContaInvestimento;
 import com.algaworks.banco.model.Pessoa;
 
