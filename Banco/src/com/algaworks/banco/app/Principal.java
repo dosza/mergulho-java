@@ -18,9 +18,10 @@ public class Principal {
 
         minhaConta.depositar(15000);
         minhaConta.creditarRendimentos(0.8);
-        Conta suaConta = new Conta(maria,1,2);
+        ContaEspecial suaConta = new ContaEspecial(maria,1,2,1000);
 
-        suaConta.depositar(3000.00);
+        suaConta.depositar(15000.00);
+        suaConta.sacar(15500.00);
         minhaConta.sacar(1000,0.5);
 
         System.out.println("titular " + minhaConta.getTitular().getNome()
