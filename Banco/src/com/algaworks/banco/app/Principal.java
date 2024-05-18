@@ -1,4 +1,4 @@
-import java.util.Random;
+package com.algaworks.banco.app;
 
 public class Principal {
     public static void main(String[] args) {

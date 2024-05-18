@@ -1,3 +1,5 @@
+package com.algaworks.banco.app;
+
 import java.util.Objects;
 
 public class Conta {
