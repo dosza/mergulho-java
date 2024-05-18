@@ -21,6 +21,8 @@ public class Principal {
         suaConta.depositar(15_000);
         suaConta.sacar(15_500);
         minhaConta.sacar(1_000,0.5);
+        minhaConta.debitarTarifaMensal();
+        suaConta.debitarTarifaMensal();
         caixaEletronico.imprimirSaldo(minhaConta);
         caixaEletronico.imprimirSaldo(suaConta);
 
