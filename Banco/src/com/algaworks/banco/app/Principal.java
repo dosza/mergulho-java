@@ -28,7 +28,7 @@ public class Principal {
                 +" saldo " +minhaConta.getSaldo());
 
        // System.out.println("Titular " + suaConta.titular.nome);
-        //System.out.println("Saldo " + suaConta.saldo);
+        System.out.println("Saldo " + suaConta.getSaldo());
 
     }
 }
