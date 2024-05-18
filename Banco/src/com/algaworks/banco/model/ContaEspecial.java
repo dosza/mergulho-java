@@ -7,4 +7,12 @@ public class ContaEspecial extends  Conta {
         super(titular, agencia, numero);
         this.valorLimite = valorLimite;
     }
+
+    public double getValorLimite() {
+        return valorLimite;
+    }
+
+    public void setValorLimite(double valorLimite) {
+        this.valorLimite = valorLimite;
+    }
 }
