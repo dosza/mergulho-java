@@ -2,7 +2,7 @@ package com.algaworks.banco.model;
 
 import java.util.Objects;
 
- public class Conta {
+ public  abstract class Conta {
     private int agencia;
     private int numero;
     private double saldo;
