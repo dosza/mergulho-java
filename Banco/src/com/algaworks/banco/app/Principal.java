@@ -1,5 +1,8 @@
 package com.algaworks.banco.app;
 
+import com.algaworks.banco.model.Conta;
+import com.algaworks.banco.model.Pessoa;
+
 public class Principal {
     public static void main(String[] args) {
         Pessoa maria=new Pessoa();

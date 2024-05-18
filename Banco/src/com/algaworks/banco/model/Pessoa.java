@@ -1,4 +1,4 @@
-package com.algaworks.banco.app;
+package com.algaworks.banco.model;
 
 public class Pessoa {
     private String nome;
