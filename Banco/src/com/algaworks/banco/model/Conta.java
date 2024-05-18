@@ -23,6 +23,8 @@ import java.util.Objects;
         }
         this.saldo += valor;
     }
+
+    public abstract void debitarTarifaMensal();
     public void sacar(double valor){
         if ( valor <= 0){
             throw  new IllegalArgumentException("Valor deve ser maior que 0");

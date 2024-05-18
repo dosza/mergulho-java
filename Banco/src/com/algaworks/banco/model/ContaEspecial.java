@@ -20,4 +20,9 @@ public class ContaEspecial extends  Conta {
     public double getSaldoDisponivel() {
         return super.getSaldoDisponivel() + getValorLimite();
     }
+
+    @Override
+    public void debitarTarifaMensal() {
+
+    }
 }
