@@ -11,7 +11,7 @@ public class Principal {
         joao.setDocumento ("00000");
         maria.setNome("Maria Aparecida");
         maria.setDocumento("11110");
-        CaixaEletronico  caixaEletronico = new CaixaEletronico();
+        CaixaEletronico caixaEletronico = new CaixaEletronico();
 
 
         ContaInvestimento minhaConta = new ContaInvestimento(joao,1,1);
