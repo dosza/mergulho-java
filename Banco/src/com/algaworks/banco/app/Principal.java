@@ -23,6 +23,7 @@ public class Principal {
         suaConta.sacar(15_500);
         minhaConta.sacar(1_000,0.5);
         caixaEletronico.imprimirSaldo(minhaConta);
+        caixaEletronico.imprimirSaldo(suaConta);
 
 
 
