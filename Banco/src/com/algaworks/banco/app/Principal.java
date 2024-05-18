@@ -1,6 +1,7 @@
 package com.algaworks.banco.app;
 
 import com.algaworks.banco.model.*;
+import com.algaworks.banco.model.atm.CaixaEletronico;
 
 public class Principal {
     public static void main(String[] args) {
