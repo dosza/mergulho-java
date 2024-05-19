@@ -8,7 +8,7 @@ import java.util.Objects;
  public  abstract class Conta {
     private int agencia;
     private int numero;
-    private BigDecimal saldo;
+    private BigDecimal saldo = new BigDecimal("0");
     private Pessoa titular;
     //construtor
 
@@ -19,7 +19,6 @@ import java.util.Objects;
         this.titular = titular;
         this.agencia = agencia;
         this.numero = numero;
-        this.saldo = new BigDecimal("0");
     }
     public void depositar(BigDecimal valor){
         if ( valor.compareTo(BigDecimal.ZERO) <= 0){
