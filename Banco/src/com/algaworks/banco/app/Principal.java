@@ -6,6 +6,8 @@ import com.algaworks.banco.model.excecao.SaldoInsuficienteException;
 import com.algaworks.banco.model.pagamento.Boleto;
 import com.algaworks.banco.model.pagamento.Holerite;
 
+import java.time.LocalDateTime;
+
 public class Principal {
     public static void main(String[] args) {
         Pessoa titular = new Pessoa();
@@ -14,7 +16,9 @@ public class Principal {
         titular2.setDocumento("00000");
 
         titular.setRendmentoAnual(15_000d);
-        titular.setDocumento("11110");
+
+        titular.setDataUltimaAtualizacao(LocalDateTime.parse("2023-06-27T13:20:00"));
+        System.out.println(titular.getDataUltimaAtualizacao());
         CaixaEletronico caixaEletronico = new CaixaEletronico();
 
 
