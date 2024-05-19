@@ -9,6 +9,23 @@ public class Pessoa {
     private BigDecimal rendmentoAnual;
     private TipoPessoa tipo = TipoPessoa.FISICA;
 
+    public Pessoa(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", documento='" + documento + '\'' +
+                ", tipo=" + tipo +
+                '}';
+    }
+
+    public Pessoa(String nome, String documento){
+        this.nome = nome;
+        this.documento = documento;
+    }
     public TipoPessoa getTipo() {
         return tipo;
     }
