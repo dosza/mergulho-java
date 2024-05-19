@@ -17,16 +17,16 @@ public class Principal {
 
         ContaInvestimento minhaConta = new ContaInvestimento(joao,1,1);
         minhaConta.depositar(15000);
-        minhaConta.creditarRendimentos(0.8);
+       // minhaConta.creditarRendimentos(0.8);
         ContaEspecial suaConta = new ContaEspecial(maria,1,2,1000);
 
         suaConta.depositar(15_000);
         suaConta.sacar(15_500);
-        minhaConta.sacar(1_000,0.5);
-        minhaConta.debitarTarifaMensal();
+        minhaConta.sacar(1_000);
+       // minhaConta.debitarTarifaMensal();
         suaConta.debitarTarifaMensal();
 
-        Boleto boletoEscola  = new Boleto(joao,200);
+        Boleto boletoEscola  = new Boleto(joao,800);
         System.out.println("Boleto pago: " + boletoEscola.estáPago());
         caixaEletronico.pagar(boletoEscola,minhaConta);
         System.out.println("Boleto pago: " + boletoEscola.estáPago());
