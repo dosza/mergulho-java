@@ -2,6 +2,7 @@ package com.algaworks.banco.app;
 
 import com.algaworks.banco.model.*;
 import com.algaworks.banco.model.atm.CaixaEletronico;
+import com.algaworks.banco.model.pagamento.Boleto;
 
 public class Principal {
     public static void main(String[] args) {
@@ -24,6 +25,13 @@ public class Principal {
         minhaConta.sacar(1_000,0.5);
         minhaConta.debitarTarifaMensal();
         suaConta.debitarTarifaMensal();
+
+        Boleto boletoEscola  = new Boleto(joao,200);
+        System.out.println("Boleto pago: " + boletoEscola.estáPago());
+        caixaEletronico.pagar(boletoEscola,minhaConta);
+        System.out.println("Boleto pago: " + boletoEscola.estáPago());
+
+        System.out.println();
         caixaEletronico.imprimirSaldo(minhaConta);
         caixaEletronico.imprimirSaldo(suaConta);
 
