@@ -27,11 +27,11 @@ public class Principal {
 
             suaConta.depositar(15_000);
             suaConta.sacar(15_500);
-            minhaConta.sacar(35_000);
+            minhaConta.sacar(1_000);
             // minhaConta.debitarTarifaMensal();
             suaConta.debitarTarifaMensal();
 
-            Boleto boletoEscola = new Boleto(titular2, 800);
+            Boleto boletoEscola = new Boleto(titular2, 35_000);
             Holerite salarioFuncionario = new Holerite(titular2, 100, 160);
 
 
