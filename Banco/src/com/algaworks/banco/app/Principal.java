@@ -2,6 +2,7 @@ package com.algaworks.banco.app;
 
 import com.algaworks.banco.model.*;
 import com.algaworks.banco.model.atm.CaixaEletronico;
+import com.algaworks.banco.model.excecao.SaldoInsuficienteException;
 import com.algaworks.banco.model.pagamento.Boleto;
 import com.algaworks.banco.model.pagamento.Holerite;
 
