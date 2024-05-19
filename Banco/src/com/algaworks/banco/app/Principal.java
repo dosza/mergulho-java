@@ -12,7 +12,8 @@ public class Principal {
         Pessoa titular2 = new Pessoa();
         titular2.setNome("Joao da Silva");
         titular2.setDocumento("00000");
-        titular.setNome("Maria Aparecida");
+
+        titular.setRendmentoAnual(15_000d);
         titular.setDocumento("11110");
         CaixaEletronico caixaEletronico = new CaixaEletronico();
 

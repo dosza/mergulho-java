@@ -3,6 +3,16 @@ package com.algaworks.banco.model;
 public class Pessoa {
     private String nome;
     private String documento;
+    private Double rendmentoAnual;
+    private TipoPessoa tipo = TipoPessoa.FISICA;
+
+    public Double getRendmentoAnual() {
+        return rendmentoAnual;
+    }
+
+    public void setRendmentoAnual(Double rendmentoAnual) {
+        this.rendmentoAnual = rendmentoAnual;
+    }
 
     public String getDocumento() {
         return documento;
