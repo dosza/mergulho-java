@@ -2,12 +2,13 @@ package com.algaworks.banco.model;
 
 import com.algaworks.banco.model.excecao.SaldoInsuficienteException;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
  public  abstract class Conta {
     private int agencia;
     private int numero;
-    private double saldo;
+    private BigDecimal saldo;
     private Pessoa titular;
     //construtor
 
@@ -18,31 +19,31 @@ import java.util.Objects;
         this.titular = titular;
         this.agencia = agencia;
         this.numero = numero;
+        this.saldo = new BigDecimal("0");
     }
-    public void depositar(double valor){
-        if ( valor <= 0){
+    public void depositar(BigDecimal valor){
+        if ( valor.compareTo(BigDecimal.ZERO) <= 0){
             throw  new IllegalArgumentException("Valor deve ser maior que 0");
         }
-        this.saldo += valor;
+        this.saldo = saldo.add(valor);
     }
-
     public abstract void debitarTarifaMensal();
-    public void sacar(double valor){
-        if ( valor <= 0){
+    public void sacar (BigDecimal valor){
+        if ( valor.compareTo(BigDecimal.ZERO) <= 0){
             throw  new IllegalArgumentException("Valor deve ser maior que 0");
         }
-        if ((getSaldoDisponivel() -valor) < 0) {
+        if ((getSaldoDisponivel().subtract(valor)).compareTo(BigDecimal.ZERO) < 0) {
             throw new SaldoInsuficienteException("Saldo insuficiente");
         }
 
-        if ( valor <= 0){
+        if ( valor.compareTo(BigDecimal.ZERO) <= 0){
             throw  new IllegalArgumentException("Valor deve ser maior que 0");
         }
-            this.saldo-=valor;
+            this.saldo = saldo.subtract(valor);
     }
 
-    public void sacar(double valor, double taxaSaque){
-        sacar(valor + taxaSaque);
+    public void sacar(BigDecimal valor, BigDecimal taxaSaque){
+        sacar(saldo.add(taxaSaque));
     }
 
     public int getAgencia() {
@@ -53,7 +54,7 @@ import java.util.Objects;
         return numero;
     }
 
-    public double getSaldo() {
+    public BigDecimal getSaldo() {
         return saldo;
     }
 
@@ -61,7 +62,7 @@ import java.util.Objects;
         return titular;
     }
 
-    public double getSaldoDisponivel(){
+    public BigDecimal getSaldoDisponivel(){
          return getSaldo();
     }
 

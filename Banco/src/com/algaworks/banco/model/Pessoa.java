@@ -1,11 +1,12 @@
 package com.algaworks.banco.model;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Pessoa {
     private String nome;
     private String documento;
-    private Double rendmentoAnual;
+    private BigDecimal rendmentoAnual;
     private TipoPessoa tipo = TipoPessoa.FISICA;
 
     public TipoPessoa getTipo() {
@@ -25,11 +26,11 @@ public class Pessoa {
     }
 
     private LocalDateTime dataUltimaAtualizacao= LocalDateTime.now();
-    public Double getRendmentoAnual() {
+    public BigDecimal getRendmentoAnual() {
         return rendmentoAnual;
     }
 
-    public void setRendmentoAnual(Double rendmentoAnual) {
+    public void setRendmentoAnual(BigDecimal rendmentoAnual) {
         this.rendmentoAnual = rendmentoAnual;
     }
 

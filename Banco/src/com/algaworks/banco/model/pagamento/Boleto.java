@@ -2,10 +2,12 @@ package com.algaworks.banco.model.pagamento;
 
 import com.algaworks.banco.model.Pessoa;
 
+import java.math.BigDecimal;
+
 public class Boleto  implements  DocumentoPagavel,DocumentoEstornavel {
 
     private Pessoa beneficiario;
-    private double valor;
+    private BigDecimal valor;
     private boolean pago;
 
     @Override
@@ -19,11 +21,11 @@ public class Boleto  implements  DocumentoPagavel,DocumentoEstornavel {
     }
 
     @Override
-    public double getValorTotal() {
+    public BigDecimal getValorTotal() {
         return valor;
     }
 
-    public Boleto(Pessoa beneficiario, double valor) {
+    public Boleto(Pessoa beneficiario, BigDecimal valor) {
         this.beneficiario = beneficiario;
         this.valor = valor;
     }

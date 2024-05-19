@@ -6,6 +6,7 @@ import com.algaworks.banco.model.excecao.SaldoInsuficienteException;
 import com.algaworks.banco.model.pagamento.Boleto;
 import com.algaworks.banco.model.pagamento.Holerite;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 public class Principal {
@@ -15,7 +16,7 @@ public class Principal {
         titular2.setNome("Joao da Silva");
         titular2.setDocumento("00000");
 
-        titular.setRendmentoAnual(15_000d);
+        titular.setRendmentoAnual(new BigDecimal("15000"));
 
         titular.setDataUltimaAtualizacao(LocalDateTime.parse("2023-06-27T13:20:00"));
         System.out.println(titular.getDataUltimaAtualizacao());
@@ -23,20 +24,20 @@ public class Principal {
 
 
         ContaInvestimento minhaConta = new ContaInvestimento(titular2, 1, 1);
-        ContaEspecial suaConta = new ContaEspecial(titular, 1, 2, 1000);
+        ContaEspecial suaConta = new ContaEspecial(titular, 1, 2, new BigDecimal("1000"));
         try {
-            minhaConta.depositar(30000);
+            minhaConta.depositar(new BigDecimal("30000"));
             // minhaConta.creditarRendimentos(0.8);
 
 
-            suaConta.depositar(15_000);
-            suaConta.sacar(15_500);
-            minhaConta.sacar(1_000);
+            suaConta.depositar(new BigDecimal("15000"));
+            suaConta.sacar(new BigDecimal("15500"));
+            minhaConta.sacar( new BigDecimal("1000"));
             // minhaConta.debitarTarifaMensal();
             suaConta.debitarTarifaMensal();
 
-            Boleto boletoEscola = new Boleto(titular2, 35_000);
-            Holerite salarioFuncionario = new Holerite(titular2, 100, 160);
+            Boleto boletoEscola = new Boleto(titular2, new BigDecimal("35000"));
+            Holerite salarioFuncionario = new Holerite(titular2, new BigDecimal("100"), 160);
 
 
             caixaEletronico.pagar(boletoEscola, minhaConta);

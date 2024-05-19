@@ -1,28 +1,30 @@
 package com.algaworks.banco.model;
 
-public class ContaEspecial extends  Conta {
-    private double valorLimite;
+import java.math.BigDecimal;
 
-    public ContaEspecial(Pessoa titular, int agencia, int numero, double valorLimite) {
+public class ContaEspecial extends  Conta {
+    private BigDecimal valorLimite;
+
+    public ContaEspecial(Pessoa titular, int agencia, int numero, BigDecimal valorLimite) {
         super(titular, agencia, numero);
         this.valorLimite = valorLimite;
     }
 
-    public double getValorLimite() {
+    public BigDecimal getValorLimite() {
         return valorLimite;
     }
 
-    public void setValorLimite(double valorLimite) {
+    public void setValorLimite(BigDecimal valorLimite) {
         this.valorLimite = valorLimite;
     }
 
     @Override
-    public double getSaldoDisponivel() {
-        return super.getSaldoDisponivel() + getValorLimite();
+    public BigDecimal getSaldoDisponivel() {
+        return super.getSaldoDisponivel().add(getValorLimite());
     }
 
     @Override
     public void debitarTarifaMensal() {
-        sacar(20);
+        sacar(new BigDecimal("20.0"));
     }
 }
