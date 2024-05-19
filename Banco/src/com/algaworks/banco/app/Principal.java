@@ -45,6 +45,7 @@ public class Principal {
         }
 
         caixaEletronico.imprimirSaldo(minhaConta);
+        System.out.println();
         caixaEletronico.imprimirSaldo(suaConta);
 
 
