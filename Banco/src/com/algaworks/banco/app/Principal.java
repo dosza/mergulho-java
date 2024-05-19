@@ -33,8 +33,9 @@ public class Principal {
 
         caixaEletronico.pagar(boletoEscola,minhaConta);
         caixaEletronico.pagar(salarioFuncionario,minhaConta);
-        System.out.println("Boleto pago: " + boletoEscola.estáPago());
-        System.out.println("Salário pago: " + salarioFuncionario.estáPago());
+        caixaEletronico.estornarPagamento(boletoEscola,minhaConta);
+        boletoEscola.imprimirRecibo();
+        salarioFuncionario.imprimirRecibo();
 
 
 
