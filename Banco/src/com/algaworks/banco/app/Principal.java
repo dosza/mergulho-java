@@ -41,7 +41,7 @@ public class Principal {
             salarioFuncionario.imprimirRecibo();
             System.out.println();
 
-        } catch (IllegalStateException e) {
+        } catch (SaldoInsuficienteException e) {
             System.out.println("Erro ao executar operação na conta: " + e.getMessage());
         }
 
