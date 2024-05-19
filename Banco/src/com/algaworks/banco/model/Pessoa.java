@@ -1,11 +1,30 @@
 package com.algaworks.banco.model;
 
+import java.time.LocalDateTime;
+
 public class Pessoa {
     private String nome;
     private String documento;
     private Double rendmentoAnual;
     private TipoPessoa tipo = TipoPessoa.FISICA;
 
+    public TipoPessoa getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(TipoPessoa tipo) {
+        this.tipo = tipo;
+    }
+
+    public LocalDateTime getDataUltimaAtualizacao() {
+        return dataUltimaAtualizacao;
+    }
+
+    public void setDataUltimaAtualizacao(LocalDateTime dataUltimaAtualizacao) {
+        this.dataUltimaAtualizacao = dataUltimaAtualizacao;
+    }
+
+    private LocalDateTime dataUltimaAtualizacao= LocalDateTime.now();
     public Double getRendmentoAnual() {
         return rendmentoAnual;
     }
