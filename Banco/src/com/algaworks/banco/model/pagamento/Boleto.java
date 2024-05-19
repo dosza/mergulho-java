@@ -2,11 +2,12 @@ package com.algaworks.banco.model.pagamento;
 
 import com.algaworks.banco.model.Pessoa;
 
-public class Boleto  implements  DocumentoPagavel {
+public class Boleto  implements  DocumentoPagavel,DocumentoEstornavel {
 
     private Pessoa beneficiario;
     private double valor;
     private boolean pago;
+
     @Override
     public boolean estáPago() {
         return pago;
@@ -25,5 +26,10 @@ public class Boleto  implements  DocumentoPagavel {
     public Boleto(Pessoa beneficiario, double valor) {
         this.beneficiario = beneficiario;
         this.valor = valor;
+    }
+
+    @Override
+    public void estornarDocumento() {
+        pago = false;
     }
 }

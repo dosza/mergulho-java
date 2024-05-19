@@ -1,6 +1,7 @@
 package com.algaworks.banco.model.atm;
 
 import com.algaworks.banco.model.Conta;
+import com.algaworks.banco.model.pagamento.DocumentoEstornavel;
 import com.algaworks.banco.model.pagamento.DocumentoPagavel;
 
 public class CaixaEletronico {
@@ -17,5 +18,13 @@ public class CaixaEletronico {
         }
         conta.sacar(documento.getValorTotal());
         documento.quitarPagamento();
+    }
+
+    public void estornarPagamento(DocumentoEstornavel documento,Conta conta){
+        if (!documento.estáPago()){
+            throw new IllegalStateException("Documento não está pago");
+        }
+        conta.depositar(documento.getValorTotal());
+        documento.estornarDocumento();
     }
 }
