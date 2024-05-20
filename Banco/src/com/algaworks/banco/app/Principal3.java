@@ -11,7 +11,7 @@ public class Principal3 {
         Banco banco = new Banco();
 
         banco.getContas().sort(Comparator.comparingInt(
-                (Conta conta)-> conta.getNumero()));
+                (conta)-> conta.getNumero()));
         for (Conta conta: banco.getContas()){
             System.out.println(conta.getAgencia() + "/" + conta.getNumero());
         }
