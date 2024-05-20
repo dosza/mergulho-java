@@ -10,13 +10,11 @@ import java.util.stream.Stream;
 public class Principal4 {
     public static void main(String[] args) {
         Banco banco = new Banco();
-        banco.getContas().stream()
-                .filter(
-                        conta -> conta.getSaldo().compareTo(new BigDecimal("50")) > 0)
-                .sorted(Comparator.comparingInt(Conta::getNumero))
-                .map( Conta::getTitular)
-                .distinct()
-                .forEach(System.out::println);
+        BigDecimal saldoTotal = banco.getContas().stream()
+                .map(Conta::getSaldo)
+                .reduce(BigDecimal.ZERO,  BigDecimal::add);
+
+        System.out.println(saldoTotal);
 
     }
 }
