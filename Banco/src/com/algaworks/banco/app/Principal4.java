@@ -14,11 +14,9 @@ public class Principal4 {
                 .filter(
                         conta -> conta.getSaldo().compareTo(new BigDecimal("50")) > 0)
                 .sorted(Comparator.comparingInt(Conta::getNumero))
-                .filter(conta -> conta.getNumero() > 200)
-                .forEach(conta -> {
-                    System.out.println(
-                            conta.getAgencia() + "/" + conta.getNumero()
-                                    + " = " + conta.getSaldo());
-                });
+                .map( Conta::getTitular)
+                .distinct()
+                .forEach(System.out::println);
+
     }
 }
