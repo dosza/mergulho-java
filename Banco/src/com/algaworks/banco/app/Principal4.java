@@ -12,7 +12,10 @@ public class Principal4 {
         Stream<Conta> stream = banco.getContas().stream();
         Stream<Conta> stream2 = stream.filter(
                 conta   ->  conta.getSaldo().compareTo(new BigDecimal("130")) > 0 );
-        stream2.forEach(conta->{
+
+        Stream<Conta> stream3 = stream2.filter( conta-> conta.getNumero() > 300);
+
+        stream3.forEach(conta->{
             System.out.println(
                     conta.getAgencia()+ "/"+conta.getNumero()
                     + " = " + conta.getSaldo()) ;
