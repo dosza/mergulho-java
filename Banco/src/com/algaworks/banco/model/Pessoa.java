@@ -2,6 +2,7 @@ package com.algaworks.banco.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 public class Pessoa {
     private String nome;
@@ -23,14 +24,16 @@ public class Pessoa {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if ( obj == null) return false;
-        if  (this.getClass() != obj.getClass()) return false;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(documento, pessoa.documento);
+    }
 
-        Pessoa pessoa = (Pessoa) obj;
-        return this.documento.equals(pessoa.documento);
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(documento);
     }
 
     public Pessoa(String nome, String documento){
