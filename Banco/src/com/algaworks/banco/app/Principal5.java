@@ -8,8 +8,7 @@ import java.util.Optional;
 public class Principal5 {
     public static void main(String[] args) {
         Banco banco =new Banco();
-        Optional<Conta> optionalContaEncontrada = banco.buscar(123,333);
-        if (optionalContaEncontrada.isPresent())
-            System.out.println(optionalContaEncontrada.get().getTitular());
+        //use optional com expressao lambda
+        banco.buscar(123,333).ifPresent(Conta::getSaldo);
     }
 }
