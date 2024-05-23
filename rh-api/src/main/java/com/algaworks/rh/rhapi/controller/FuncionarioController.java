@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/funcionarios")
 public class FuncionarioController {
-    private FuncionarioRepository funcionarioRepository;
+    private final FuncionarioRepository funcionarioRepository;
 
     public FuncionarioController(FuncionarioRepository funcionarioRepository) {
         this.funcionarioRepository = funcionarioRepository;
