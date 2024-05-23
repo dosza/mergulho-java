@@ -36,7 +36,7 @@ public class FuncionarioController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @PutMapping("{/funcionarioId}")
+    @PutMapping("/{funcionarioId}")
     public ResponseEntity<Funcionario> atualizar(@PathVariable  Long funcionarioId, @RequestBody Funcionario funcionario){
         if ( !funcionarioRepository.existsById(funcionarioId)){
             return ResponseEntity.notFound().build();
