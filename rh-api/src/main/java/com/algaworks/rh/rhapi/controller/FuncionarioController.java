@@ -4,6 +4,7 @@ package com.algaworks.rh.rhapi.controller;
 import com.algaworks.rh.rhapi.model.Funcionario;
 import com.algaworks.rh.rhapi.repository.FuncionarioRepository;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,5 +27,12 @@ public class FuncionarioController {
     @GetMapping
     public List<Funcionario> listar(){
         return  funcionarioRepository.findAll();
+    }
+
+    @GetMapping("/{funcionarioId}")
+    public ResponseEntity<Funcionario> buscar (@PathVariable  Long funcionarioId){
+        return funcionarioRepository.findById(funcionarioId)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 }
