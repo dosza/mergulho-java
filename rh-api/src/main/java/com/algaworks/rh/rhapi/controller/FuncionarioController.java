@@ -22,4 +22,9 @@ public class FuncionarioController {
     public Funcionario cadastrar(@RequestBody Funcionario funcionario){
         return funcionarioRepository.save(funcionario);
     }
+
+    @GetMapping
+    public List<Funcionario> listar(){
+        return  funcionarioRepository.findAll();
+    }
 }
