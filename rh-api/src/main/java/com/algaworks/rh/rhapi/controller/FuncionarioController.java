@@ -21,7 +21,6 @@ public class FuncionarioController {
 
     @PostMapping
     public Funcionario cadastrar(@RequestBody Funcionario funcionario){
-        System.out.println(funcionario.toString());
-        return  funcionario;
+        return funcionarioRepository.save(funcionario);
     }
 }
