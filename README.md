@@ -66,7 +66,7 @@ docker-compose up
 docker-compose down 
 ```
 
-## Executando apenas o banco de dados ##
+## Executando apenas o Mysql ##
 Note: será executado o container configurado em [docker-compose.yml](rh-api/docker-compose.yml)</br>
 
 **Dica**: crie um link-simbólico de .env na pasta rh-api
