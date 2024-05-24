@@ -43,14 +43,17 @@ http://localhost:808/funcionarios/{funcionarioId}
 1.  Deletar funcionário pelo (id)
 
 ## Diferenças desse projeto ##
-Projeto original usava o banco de dados H2.
-Este projeto executado em um container construído pelo *docker-compose*
+Projeto original usava o banco de dados H2.<br/>
+Este projeto utiliza MYSQL em container.
 
 
 
 ## compose.yaml ##
 Adicionei a string ```allowPublicKeyRetrieval=true``` em *spring.datasource.url*
 
+O arquivo [compose.yaml](compose.yaml) contém dois serviços.
+1. mysqldb (configura o banco de dados)
+2. app (executa a aplicação spring boot)
 
 ```yaml
     environment:
