@@ -6,8 +6,6 @@
 http://localhost:8080/funcionarios 
 
 
-#### Parametros #### 
-
 #### Buscar um funcionário pelo id  ####
 http://localhost:8080/funcionarios/{funcionarioId}
 
@@ -27,11 +25,10 @@ status      | string    | ATIVO\|INATIVO
 http://localhost:808/funcionarios/{funcionarioId}
 
 ### Método PUT ###
+
 #### Atualizar dados de funcionário (id) ####
+
 http://localhost:808/funcionarios/{funcionarioId}
-
-
-
 
 ### Método DELETE ###
 1.  Deletar funcionário pelo (id)
