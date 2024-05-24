@@ -49,7 +49,6 @@ Este projeto utiliza MYSQL em container.
 
 
 ## compose.yaml ##
-Adicionei a string ```allowPublicKeyRetrieval=true``` em *spring.datasource.url*
 
 O arquivo [compose.yaml](compose.yaml) contém dois serviços.
 1. mysqldb (configura o banco de dados)
