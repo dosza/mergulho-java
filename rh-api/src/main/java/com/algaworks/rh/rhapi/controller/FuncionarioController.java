@@ -3,20 +3,18 @@ package com.algaworks.rh.rhapi.controller;
 
 import com.algaworks.rh.rhapi.model.Funcionario;
 import com.algaworks.rh.rhapi.repository.FuncionarioRepository;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@AllArgsConstructor
 @RestController
 @RequestMapping("/funcionarios")
 public class FuncionarioController {
-    private final FuncionarioRepository funcionarioRepository;
-
-    public FuncionarioController(FuncionarioRepository funcionarioRepository) {
-        this.funcionarioRepository = funcionarioRepository;
-    }
+    private FuncionarioRepository funcionarioRepository;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
