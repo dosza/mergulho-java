@@ -45,5 +45,16 @@ public class FuncionarioController {
 
     }
 
+    @DeleteMapping("/{funcionarioId}")
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public ResponseEntity<Funcionario> deletar(@PathVariable Long funcionarioId){
+        if ( !funcionarioRepository.existsById(funcionarioId)) {
+            return ResponseEntity.notFound().build();
+        }
+        ResponseEntity<Funcionario> f = this.buscar(funcionarioId);
+        funcionarioRepository.delete(f.getBody());
+        return f;
+    }
+
 
 }
