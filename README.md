@@ -36,6 +36,7 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 1.  Instalar docker
 2.  Instalar docker-compose
 3.  Configurar o arquivo [.env](#env)
+4.  [Executar o projeto](#executando-o-projeto)
 
 ## .env ##
 
@@ -52,7 +53,7 @@ SPRING_LOCAL_PORT=8080
 SPRING_DOCKER_PORT=8080
 
 ```
-## Executando  o projeto ##
+## Executando o projeto ##
 Note: Estes comandos devem ser executados na pasta raíz do repositório.</br>
 Isto levantará um container com mysql e outro executando a aplicação spring
 ```bash 
