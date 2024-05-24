@@ -65,7 +65,7 @@ O arquivo [compose.yaml](compose.yaml) contém dois serviços.
   ```
 
 Este projeto utiliza a imagem mysql:latest</br>
-Foram aplicadas configurações especificas em *[applications.properties]*(rh-api/src/main/resources/application.properties)
+Foram aplicadas configurações especificas em [*application.properties*](rh-api/src/main/resources/application.properties)
 
 ```properties
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
