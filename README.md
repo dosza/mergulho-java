@@ -49,11 +49,25 @@ Este projeto executado em um container construído pelo *docker-compose*
 
 
 ## compose.yaml ##
-Adicionei a string *allowPublicKeyRetrieval=true* em  *spring.datasource.url* para resolver problemas de inicialização do SpringBoot
+Adicionei a string ```allowPublicKeyRetrieval=true``` em *spring.datasource.url*
 
-Diferente do tutorial de configuração de spring foram removidas configurações de dialeto *Mysql5* e aplicadas a de *Mysql8*
-Utilize a imagem *mysql:latest* no serviço mysqldb
 
+```yaml
+    environment:
+      SPRING_APPLICATION_JSON: '{
+        "spring.datasource.url"  : "jdbc:mysql://mysqldb:$MYSQLDB_DOCKER_PORT/$MYSQLDB_DATABASE?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true",
+        "spring.datasource.username" : "$MYSQLDB_USER",
+        "spring.datasource.password" : "$MYSQLDB_ROOT_PASSWORD"
+      }'
+      
+  ```
+
+Este projeto utiliza a imagem mysql:latest</br>
+Foram aplicadas configurações especificas em *[applications.properties]*(rh-api/src/main/resources/application.properties)
+
+```properties
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+```
 ## Referências ##
 https://www.bezkoder.com/docker-compose-spring-boot-mysql/</br>
 https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed
