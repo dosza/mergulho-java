@@ -56,8 +56,16 @@ SPRING_DOCKER_PORT=8080
 ## Executando o projeto ##
 Note: Estes comandos devem ser executados na pasta raíz do repositório.</br>
 Isto levantará um container com mysql e outro executando a aplicação spring
+
 ```bash 
 docker-compose up
+```
+
+## Reconstruindo a aplicação ##
+Gera o container com a imagens atualizadas.
+
+```bash
+docker-compose up --build
 ```
 
 ## Paralizando o projeto ## 
