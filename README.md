@@ -29,8 +29,8 @@ Foram aplicadas configurações especificas em [*application.properties*](rh-api
 spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
 ```
 ## Referências ##
-[Docker Compose: Spring Boot and MySQL example ](https://www.bezkoder.com/docker-compose-spring-boot-mysql/</br>)
-[Connection Spring Boot-MySql : Public Key Retrieval is not allowed](https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed)
+[Docker Compose: Spring Boot and MySQL example ](https://www.bezkoder.com/docker-compose-spring-boot-mysql/</br>)</br>
+[Connection Spring Boot-MySql : Public Key Retrieval is not allowed](https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed)</br>
 
 ## Pré-requisitos ##
 1.  Instalar docker
