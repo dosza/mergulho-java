@@ -29,6 +29,7 @@ email       | string | email@server.com
 salario     | numeral | 12000
 dataAdmissao| string   |YYYY-MM-DD
 status      | string    | ATIVO\|INATIVO
+
 http://localhost:808/funcionarios/{funcionarioId}
 
 ### Método PUT ###
