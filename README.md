@@ -19,14 +19,17 @@ Diferente do tutorial de configuração de spring foram removidas configuraçõe
 Utilize a imagem *mysql:latest* no serviço mysqldb
 
 ## Referências ##
-https://www.bezkoder.com/docker-compose-spring-boot-mysql/
+https://www.bezkoder.com/docker-compose-spring-boot-mysql/</br>
 https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed
+
 ## Pré-requisitos ##
 1.  Instalar docker
 2.  Instalar docker-compose
-3.  Configurar o arquivo .env
+3.  Configurar o arquivo [.env](#env)
 
-## Configurando o arquivo .env na raiz do **repositório** ##
+## .env ##
+
+### Configurando o arquivo .env na raiz do **repositório** ###
 Note: *.env* é um arquivo de variáveis de ambiente (consta no .gitignore)
 Substitua password pela respectiva senha do banco de dados.
 ```ini
@@ -40,16 +43,29 @@ SPRING_DOCKER_PORT=8080
 
 ```
 ## Executando  o projeto ##
-
+Note: Estes comandos devem ser executados na pasta raíz do repositório.</br>
 Isto levantará um container com mysql e outro executando a aplicação spring
 ```bash 
 docker-compose up
 ```
 
 ## Paralizando o projeto ## 
+
 ```bash
 docker-compose down 
 ```
+
+## Executando apenas o banco de dados ##
+Note: será executado o container configurado em [docker-compose.yml](rh-api/docker-compose.yml)</br>
+
+**Dica**: crie um link-simbólico de .env na pasta rh-api
+
+```bash
+cd rh-api
+ln -s ../.env .env
+docker-compose up
+```
+
 ## Dica ##
 Para paralizar o container e deletar arquivos use: 
 
