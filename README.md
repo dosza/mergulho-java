@@ -6,6 +6,15 @@
 ## API RH v0.1.0 ##
 Link da  especificação da [API](api.md)
 
+## Diferenças desse projeto ##
+
+Recurso                             |Projeto original   | v0.1.0
+------------------------------------|-------------------|---------------
+Banco de dados                      | H2                | MySQL 
+Docker compose para MySQL           | ❌️                | ✅️
+Docker compose para MYSQL e backend | ❌️                | ✅️
+Método HTTP DELETE                  | ❌️                | ✅️
+
 ## compose.yaml ##
 
 O arquivo [compose.yaml](compose.yaml) contém dois serviços.
