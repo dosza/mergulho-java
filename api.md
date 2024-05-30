@@ -1,4 +1,4 @@
-## RH API v0.0.1 ##
+## RH API v0.1.0 ##
 
 ### Métodos GET ### 
 
@@ -34,6 +34,9 @@ http://localhost:808/funcionarios/{funcionarioId}
 1.  Deletar funcionário pelo (id)
 
 ## Diferenças desse projeto ##
-Projeto original usava o banco de dados H2.<br/>
-Este projeto utiliza MYSQL em container.
 
+Recurso		|Projeto original   | v0.1.0
+---------------	|---------------|
+Banco de dados | H2	| MySQL	|
+Docker compose para MySQL | ❌️	|✅️
+Método DELITE | ❌️	|✅️

@@ -3,7 +3,7 @@
 
  Códigos ensinados no evento mergulho java da Algaworks
 
-## API RH v0.0.1 ##
+## API RH v0.1.0 ##
 Link da  especificação da [API](api.md)
 
 ## compose.yaml ##
