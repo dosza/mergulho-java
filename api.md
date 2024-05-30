@@ -22,7 +22,7 @@ salario     | numeral | 12000
 dataAdmissao| string   |YYYY-MM-DD
 status      | string    | ATIVO\|INATIVO
 
-http://localhost:808/funcionarios/{funcionarioId}
+http://localhost:8080/funcionarios/{funcionarioId}
 
 ### Método PUT ###
 
