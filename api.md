@@ -11,7 +11,7 @@ http://localhost:8080/funcionarios/{funcionarioId}
 
 ### Métodos POST ###
 #### Criar funcionário ####
-#### Parâmetros  (body) ####
+#### Parâmetros (body) ####
 Obs: enviar no corpo da requisição (body) em formato JSON.
 
 Parâmetros | Tipo   | Valor
