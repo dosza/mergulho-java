@@ -6,15 +6,16 @@
 ## API RH v0.1.0 ##
 Link da  especificação da [API](api.md)
 
-## Diferenças desse projeto ##
+## Diferenças deste projeto ##
 
 Recurso                             |Projeto original   | v0.1.0
 ------------------------------------|-------------------|---------------
-Banco de dados                      | H2                | MySQL 
+Banco de dados                      | H2\*              | MySQL 
 Docker compose para MySQL           | ❌️                | ✅️
 Docker compose para MYSQL e backend | ❌️                | ✅️
 Método HTTP DELETE                  | ❌️                | ✅️
 
+\* [H2](https://h2database.com/html/main.html) é um banco de dados em memória RAM.
 
 ### Diferenças de implementação ### 
 
