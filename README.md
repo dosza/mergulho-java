@@ -15,6 +15,16 @@ Docker compose para MySQL           | ❌️                | ✅️
 Docker compose para MYSQL e backend | ❌️                | ✅️
 Método HTTP DELETE                  | ❌️                | ✅️
 
+
+### Diferenças de implementação ### 
+
+Classe [Funcionario](rh-api/src/main/java/com/algaworks/rh/rhapi/model/Funcionario.java)
+
+Substitui os métodos *getters*, *setters* pelas respectivas anotações (lombok) *@Getter* e *@Setter*<br/>
+Substitui os métodos *equals*, *hashCode* pela anotação *@EqualsAndHashCode*.</br> 
+Estes métodos são **fundamentais** para **comparar objetos** da mesma classe</br>
+
+
 ## compose.yaml ##
 
 O arquivo [compose.yaml](compose.yaml) contém dois serviços.
