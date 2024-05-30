@@ -35,8 +35,8 @@ http://localhost:808/funcionarios/{funcionarioId}
 
 ## Diferenças desse projeto ##
 
-Recurso		|Projeto original   | v0.1.0
----------------	|---------------|
-Banco de dados | H2	| MySQL	|
-Docker compose para MySQL | ❌️	|✅️
-Método DELITE | ❌️	|✅️
+Recurso						|Projeto original	| v0.1.0
+----------------------------|-------------------|---------------
+Banco de dados 				| H2			| MySQL	
+Docker compose para MySQL 	| ❌️			| ✅️
+Método DELETE 				| ❌️			| ✅️
