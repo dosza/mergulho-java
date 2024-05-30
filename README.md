@@ -20,7 +20,7 @@ Método HTTP DELETE                  | ❌️                | ✅️
 
 Classe [Funcionario](rh-api/src/main/java/com/algaworks/rh/rhapi/model/Funcionario.java)
 
-Substitui os métodos ```getters```, ```setters``` pelas respectivas anotações ```@Getter``` e ```@Setter```
+Substitui os métodos ```getters```, ```setters``` pelas respectivas anotações ```@Getter``` e ```@Setter```<br/>
 Substitui os métodos ```equals```, ```hashCode``` pela anotação ```@EqualsAndHashCode```.</br> 
 Estes métodos são **fundamentais** para **comparar objetos** da mesma classe</br>
 
