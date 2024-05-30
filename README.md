@@ -6,22 +6,22 @@
 
 # Índice #
 
-1.  [API RH v0.1.0](#1-api-rh-v0-1-0)
+1.  [API RH v0.1.0](#1-api-rh-v010)
 2.  [Diferenças deste projeto](#2-diferenças-deste-projeto)
-   1. [Diferenças de implementação](#2-1-diferenças-de-implementação)
-      1. [Getters and Setters](#2-1-1-getters-and-setters)
-      2. [Equals and HashCode](#2-1-2-equals-and-hashcode)
+   1. [Diferenças de implementação](#21-diferenças-de-implementação)
+      1. [Getters and Setters](#211-getters-and-setters)
+      2. [Equals and HashCode](#212-equals-and-hashcode)
 3. [Docker](#3-docker)
-   1. [Estrutura de um projeto docker](#3-1-estrutura-de-um-projeto-docker)
-   2. [Pré-requisitos](#3-2-pré-requisitos)
-   3. [.env](#3-3--arquivo--env)
-      1. [Configurando o arquivo .env na raiz do repositório](#3-3-1-configurando-o-arquivo--env-na-raiz-do-repositório)
-   4. [compose.yaml](#3-4-compose-yaml)
-   5. [Executando o projeto com Docker](#3-5-executando-o-projeto-com-docker)
-      1. [Executando apenas o container MySQL](#3-5-1-executando-apenas-o-container-mysql)
-   6. [Reconstruindo a imagem docker da aplicação](#3-6-reconstruindo-a-imagem-docker-da-aplicação)
-   7. [Paralizando o projeto](#3-7-paralizando-o-projeto)
-   8. [Dica](#3-8-dica)
+   1. [Estrutura de um projeto docker](#31-estrutura-de-um-projeto-docker)
+   2. [Pré-requisitos](#32-pré-requisitos)
+   3. [.env](#33--arquivo-env)
+      1. [Configurando o arquivo .env na raiz do repositório](#331-configurando-o-arquivo-env-na-raiz-do-repositório)
+   4. [compose.yaml](#34-composeyaml)
+   5. [Executando o projeto com Docker](#35-executando-o-projeto-com-docker)
+      1. [Executando apenas o container MySQL](#351-executando-apenas-o-container-mysql)
+   6. [Reconstruindo a imagem docker da aplicação](#36-reconstruindo-a-imagem-docker-da-aplicação)
+   7. [Paralizando o projeto](#37-paralizando-o-projeto)
+   8. [Dica](#38-dica)
 4. [Notas de aula](#4-notas-de-aula)
 5. [Referências](#5-referências)
 
@@ -142,5 +142,5 @@ docker-compose down --rmi local -v
 
 ## 4 Notas de aula ##
 ## 5 Referências ##
-[Docker Compose: Spring Boot and MySQL example ](https://www.bezkoder.com/docker-compose-spring-boot-mysql/</br>)</br>
-[Connection Spring Boot-MySql : Public Key Retrieval is not allowed](https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed)</br>
+1. [Docker Compose: Spring Boot and MySQL example ](https://www.bezkoder.com/docker-compose-spring-boot-mysql/</br>)</br>
+2. [Connection Spring Boot-MySql : Public Key Retrieval is not allowed](https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed)</br>
