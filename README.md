@@ -89,5 +89,5 @@ docker-compose up
 Para paralizar o container e deletar arquivos use: 
 
 ```bash
-docker-compose down --rmi all -v
+docker-compose down --rmi local -v
 ```
