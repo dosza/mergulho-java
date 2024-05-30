@@ -14,7 +14,7 @@
 3. [Docker](#3-docker)
    1. [Estrutura de um projeto docker](#31-estrutura-de-um-projeto-docker)
    2. [Pré-requisitos](#32-pré-requisitos)
-   3. [.env](#33--arquivo-env)
+   3. [Arquivo .env](#33--arquivo-env)
       1. [Configurando o arquivo .env na raiz do repositório](#331-configurando-o-arquivo-env-na-raiz-do-repositório)
    4. [compose.yaml](#34-composeyaml)
    5. [Executando o projeto com Docker](#35-executando-o-projeto-com-docker)
@@ -141,6 +141,7 @@ docker-compose down --rmi local -v
 ```
 
 ## 4 Notas de aula ##
+
 ## 5 Referências ##
 1. [Docker Compose: Spring Boot and MySQL example ](https://www.bezkoder.com/docker-compose-spring-boot-mysql/</br>)</br>
 2. [Connection Spring Boot-MySql : Public Key Retrieval is not allowed](https://stackoverflow.com/questions/57416600/connection-spring-boot-mysql-public-key-retrieval-is-not-allowed)</br>
