@@ -6,11 +6,11 @@
 
 # Índice #
 
-1.  [API RH v0.1.0](#1-api-rh-v010)
-2.  [Diferenças deste projeto](#2-diferenças-deste-projeto)
-   1. [Diferenças de implementação](#21-diferenças-de-implementação)
-      1. [Getters and Setters](#211-getters-and-setters)
-      2. [Equals and HashCode](#212-equals-and-hashcode)
+1. [API RH v0.1.0](#1-api-rh-v010)
+2. [Diferenças deste projeto](#2-diferenças-deste-projeto)
+    1. [Diferenças de implementação](#21-diferenças-de-implementação)
+    2. [Getters and Setters](#211-getters-and-setters)
+    3. [Equals and HashCode](#212-equals-and-hashcode)
 3. [Docker](#3-docker)
    1. [Estrutura de um projeto docker](#31-estrutura-de-um-projeto-docker)
    2. [Pré-requisitos](#32-pré-requisitos)
