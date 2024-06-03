@@ -54,12 +54,14 @@ Substitui os métodos ```equals```, ```hashCode``` pela anotação ```@EqualsAnd
 Estes métodos são **fundamentais** para **comparar objetos** da mesma classe</br>
 
 ## 3 Docker ##
+**Novidades**: Agora é possível levantar as imagens docker com o comando **make**
 ### 3.1 Estrutura de um projeto docker ###
 ### 3.2 Pré-requisitos ###
 1.  Instalar docker
 2.  Instalar docker-compose
-3.  Configurar o arquivo [.env](#arquivo-env)
-4.  [Executar o projeto](#executando-o-projeto)
+3.  Instalar **make**
+4. Configurar o arquivo [.env](#arquivo-env)
+5. [Executar o projeto](#executando-o-projeto)
 
 ### 3.3  Arquivo .env ###
 
@@ -106,7 +108,7 @@ Note: Estes comandos devem ser executados na pasta raíz do repositório.</br>
 Isto levantará um container com mysql e outro executando a aplicação spring
 
 ```bash 
-docker-compose up
+make 
 ```
 
 #### 3.5.1 Executando apenas o container MySQL ####
@@ -124,20 +126,20 @@ docker-compose up
 Gera o container com a imagens atualizadas.
 
 ```bash
-docker-compose up --build
+make build
 ```
 
 ### 3.7 Paralizando o projeto ###
 
 ```bash
-docker-compose down 
+make down
 ```
 
 ### 3.8 Dica ###
 Para paralizar o container e deletar arquivos use: 
 
 ```bash
-docker-compose down --rmi local -v
+make clean
 ```
 
 ## 4 Notas de aula ##
