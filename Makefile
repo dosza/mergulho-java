@@ -6,6 +6,7 @@ down:
 
 stop:
 	docker-compose stop
+	cd ./rh-api; docker-compose stop
 
 build:
 	docker-compose up --build
