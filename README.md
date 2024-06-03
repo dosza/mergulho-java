@@ -36,6 +36,7 @@ Recurso                             |Projeto original   | v0.1.0
 Banco de dados                      | H2\*              | MySQL 
 Docker compose para MySQL           | ❌️                | ✅️
 Docker compose para MYSQL e backend | ❌️                | ✅️
+Makefile para docker-compose        | ❌️                | ✅️
 Método HTTP DELETE                  | ❌️                | ✅️
 
 \* [H2](https://h2database.com/html/main.html) é um banco de dados em memória RAM.
