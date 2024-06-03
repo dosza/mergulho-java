@@ -117,8 +117,7 @@ Note: será executado o container configurado em [docker-compose.yml](rh-api/doc
 **Dica**: crie um link-simbólico de .env na pasta rh-api
 
 ```bash
-cd rh-api
-ln -s ../.env .env
+ln -s $PWD/.env ./rh-api/.env
 make database
 ```
 
