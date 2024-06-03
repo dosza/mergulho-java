@@ -119,7 +119,7 @@ Note: será executado o container configurado em [docker-compose.yml](rh-api/doc
 ```bash
 cd rh-api
 ln -s ../.env .env
-docker-compose up
+make database
 ```
 
 ### 3.6 Reconstruindo a imagem docker da aplicação ###
